@@ -95,6 +95,8 @@ QB.Phone.Functions.SetupApplications = function(data) {
                 icon = '<img src="./img/apps/lsbn.png" style="width: 85%;margin-top: 7%;">';
             } else if (app.app == "contacts"){
                 icon = '<img src="./img/apps/contacts.png" style="width: 85%;margin-top: 7%;">';
+            } else if (app.app == "camera"){
+                icon = '<img src="./img/apps/contacts.png" style="width: 85%;margin-top: 7%;">';
             }
 
 
@@ -284,7 +286,7 @@ $(document).on('click', '.mykeys-key', function(e){
     }))
 });
 
-$(document).on('click', '.phone-take-camera-button', function(event){
+$(document).on('click', '.camera-application', function(event){
     event.preventDefault();
     $.post('https://qb-phone/TakePhoto', JSON.stringify({}),function(url){
         // setUpCameraApp(url)

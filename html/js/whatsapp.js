@@ -243,6 +243,18 @@ function detectURLs(message) {
   return message.match(urlRegex)
 }
 
+var input = document.getElementById("whatsapp-openedchat-message");
+input.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("whatsapp-openedchat-send").click();
+    }
+  });
+
+
 $(document).on('click', '#whatsapp-openedchat-send', function(e){
     var Message = $("#whatsapp-openedchat-message").val();
     var urlDetect = detectURLs(Message)

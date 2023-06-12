@@ -312,7 +312,6 @@ local function CallCheck()
         end
     end
 end
-
 local function CallContact(CallData, AnonymousCall)
     local RepeatCount = 0
     PhoneData.CallData.CallType = "outgoing"
@@ -324,12 +323,12 @@ local function CallContact(CallData, AnonymousCall)
     TriggerServerEvent('qb-phone:server:CallContact', PhoneData.CallData.TargetData, PhoneData.CallData.CallId, AnonymousCall)
     TriggerServerEvent('qb-phone:server:SetCallState', true)
 
-    for _ = 1, Config.CallRepeats, 1 do
+    for _ = 1, Config.CallRepeats + 1, 1 do
         if not PhoneData.CallData.AnsweredCall then
-            if RepeatCount ~= Config.CallRepeats then
+            if RepeatCount + 1 ~= Config.CallRepeats + 1 then
                 if PhoneData.CallData.InCall then
-                    RepeatCount += 1
-                    TriggerServerEvent("InteractSound_SV:PlayOnSource", "dialing", 0.1)
+                    RepeatCount = RepeatCount + 1
+                    TriggerServerEvent("InteractSound_SV:PlayOnSource", "demo", 0.1)
                 else
                     break
                 end
@@ -343,6 +342,36 @@ local function CallContact(CallData, AnonymousCall)
         end
     end
 end
+-- local function CallContact(CallData, AnonymousCall)
+--     local RepeatCount = 0
+--     PhoneData.CallData.CallType = "outgoing"
+--     PhoneData.CallData.InCall = true
+--     PhoneData.CallData.TargetData = CallData
+--     PhoneData.CallData.AnsweredCall = false
+--     PhoneData.CallData.CallId = GenerateCallId(PhoneData.PlayerData.charinfo.phone, CallData.number)
+
+--     TriggerServerEvent('qb-phone:server:CallContact', PhoneData.CallData.TargetData, PhoneData.CallData.CallId, AnonymousCall)
+--     TriggerServerEvent('qb-phone:server:SetCallState', true)
+
+--     for _ = 1, Config.CallRepeats, 1 do
+--         if not PhoneData.CallData.AnsweredCall then
+--             if RepeatCount ~= Config.CallRepeats then
+--                 if PhoneData.CallData.InCall then
+--                     RepeatCount += 1
+--                     TriggerServerEvent("InteractSound_SV:PlayOnSource", "dialing", 0.1)
+--                 else
+--                     break
+--                 end
+--                 Wait(Config.RepeatTimeout)
+--             else
+--                 CancelCall()
+--                 break
+--             end
+--         else
+--             break
+--         end
+--     end
+-- end
 
 local function AnswerCall()
     if (PhoneData.CallData.CallType == "incoming" or PhoneData.CallData.CallType == "outgoing") and PhoneData.CallData.InCall and not PhoneData.CallData.AnsweredCall then
@@ -738,7 +767,7 @@ RegisterNetEvent('qb-phone:client:GetCalled', function(CallerNumber, CallId, Ano
                 if RepeatCount + 1 ~= Config.CallRepeats + 1 then
                     if PhoneData.CallData.InCall then
                         RepeatCount = RepeatCount + 1
-                        TriggerServerEvent("InteractSound_SV:PlayOnSource", "ringing", CallVolume)
+                        TriggerServerEvent("InteractSound_SV:PlayWithinDistance",5, "ringing", CallVolume)
 
                         if not PhoneData.isOpen then
                             SendNUIMessage({

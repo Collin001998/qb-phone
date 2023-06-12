@@ -295,12 +295,19 @@
 
 #whatsapp-openedchat-back {
     position: absolute;
+    line-height: 2.5vh;
+    top: -6vh;
+    left: 3.7vh;
+    font-size: 1.7vh;
+    color: white;
+    transition: .1s;
+    /* position: absolute;
     line-height: 5.5vh;
     top: -5.2vh;
     left: 3.7vh;
     color: white;
     font-size: 2.0vh;
-    transition: .1s;
+    transition: .1s; */
 }
 
 #whatsapp-openedchat-back:hover {
@@ -310,8 +317,8 @@
 .whatsapp-openedchat-name {
     position: absolute;
     line-height: 5.5vh;
-    top: -0.7vh;
-    left: 8.5vh;
+    top: -7.5vh;
+    left: 7.5vh;
     color: white;
     font-size: 1.45vh;
     font-family: 'Poppins', sans-serif;
@@ -320,8 +327,8 @@
 .whatsapp-openedchat-number {
     position: absolute;
     line-height: 5.5vh;
-    top: 1.4vh;
-    left: 8.5vh;
+    top: -7.5vh;
+    left: 7.5vh;
     color: white;
     font-size: 1.45vh;
     font-family: 'Poppins', sans-serif;
@@ -344,9 +351,9 @@
 
 .whatsapp-openedchat-messages { /* the whole fucking message app */
     position: absolute;
-    height: 63%;
+    height: 75%;
     width: 90%;
-    top: 17vh;
+    top: 8vh;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -387,9 +394,9 @@
     outline: none;
     text-indent: 3vh;
     z-index: 100;
-    top: 5.75vh;
-    left: 0.8vh;
-    width: 23vh;
+    top: 5.2vh;
+    left: 3.8vh;
+    width: 20vh;
     color: white;
 }
 
@@ -413,7 +420,8 @@
 
 #whatsapp-openedchat-send {
     position: relative;
-    top: 35%;
+    /* top: 35%; */
+    top: 5.2vh;
     left: 88.5%;
     color: white;
     text-align: center;

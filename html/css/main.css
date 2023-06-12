@@ -143,10 +143,10 @@ body {
 }
 
 .phone-background {
-    height: 62.7vh;
+    height: 58.7vh;
     width: 28.0vh;
     bottom: 1.65vh;
-    border-radius: 1vh;
+    border-radius: 3vh;
     right: 2.0vh;
     margin: 5vh;
     overflow: hidden;
@@ -159,7 +159,7 @@ body {
 }
 
 .phone-header {
-    width: 100%;
+    width: 90%;
     height: 5vh;
     z-index: 141;
     position: absolute;
@@ -169,7 +169,8 @@ body {
 #phone-time {
     font-family: 'Roboto', sans-serif;
     font-size: 1.1vh;
-    padding: 1.2vh 0 0 1.1vh;
+    padding: 1.3vh 0 0 1.1vh;
+    margin-left: 30px;
     float: left;
     color: white !important;
 }
@@ -178,7 +179,7 @@ body {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-size: 1.1vh;
-    padding: 1.2vh 0 0 1vh;
+    padding: 1.3vh 0 0 1vh;
     float: left;
     color: white !important;
 }
@@ -198,12 +199,25 @@ body {
 }
 
 #phone-sun {
-    left: -1.2vh;
+    left: -1vh;
+    top: 0.2vh;
     position: relative;
 }
 
 #phone-unlock {
     left: -0.6vh;
+    position: relative;
+}
+
+#silent-mode-one-top {
+    /* left: -0.8vh; */
+    top: 0.2vh;
+    position: relative;
+}
+
+#silent-mode-two-top {
+    /* left: -0.1vh; */
+    top: 0.2vh;
     position: relative;
 }
 
@@ -216,7 +230,7 @@ body {
     display: none;
     position: absolute;
     top: 8%;
-    height: 93%;
+    height: 100%;
     width: 100%;
     background-color: rgb(65, 65, 65);
     z-index: 100;
@@ -225,16 +239,25 @@ body {
 .phone-footer {
     position: absolute;
     bottom: -0.5vh;
-    height: 5vh;
+    height: 1.3vh;
     width: 100%;
-    background: #00000029;
+    /* background: #00000029; */
     z-index: 140;
-    border-top: 0.1vh solid #0000003b;
+    /* border-top: 0.1vh solid #0000003b; */
 }
 
 .phone-home-container {
-    margin-top: 0.6vh;
+    /* margin-top: 0.6vh; */
+    margin: auto;
     position: relative;
+}
+
+#homebutton {
+    width: 100px;
+    height: 5px;
+    border-radius: 2vh;
+    left: 110px;
+    background: #f3f3f3;
 }
 
 .phone-home-button-class {
@@ -265,7 +288,7 @@ body {
 
 .phone-applications {
     position: relative;
-    height: 97%;
+    height: 103%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.05);
 }
@@ -285,6 +308,24 @@ body {
 }
 
 .phone-application:hover {
+    opacity: 1.0;
+}
+
+.camera-application {
+    position: relative;
+    height: 4.8vh;
+    width: 4.8vh;
+    left: 0vh;
+    float: left;
+    margin-left: 1.75vh;
+    margin-top: 1.5vh;
+    border-radius: 1.25vh;
+    text-align: center;
+    opacity: 0.9;
+    transition: .05s;
+}
+
+.camera-application:hover {
     opacity: 1.0;
 }
 

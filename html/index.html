@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="container disableSelection">
-            <img src="./img/samsung-s10.png" class="phone-frame">
+            <img src="./img/iphone.png" class="phone-frame">
             <div class="phone-container phone-background">
                 <!-- Phone Header -->
                 <div class="phone-header">
@@ -66,9 +66,14 @@
                     <div id="player-id">1</div>
                     <div id="phone-icons">
                         <i class="fas fa-angle-down phone-tab-button" id="phone-arrow" data-toggle="tooltip" data-placement="left" title="Put Phone Away"></i>
-                        <i class="fas fa-sun" id="phone-sun" data-toggle="tooltip" data-placement="left" title="Weather Unavailable"></i>
-                        <i class="fas fa-unlock" id="phone-unlock" style="color: #9ed4a6;" data-toggle="tooltip" data-placement="left" title="Unlocked"></i>
-                        <i class="fas fa-signal" id="phone-signal" data-toggle="tooltip" data-placement="left" title="QBCore 5G"></i>
+                        <div id="phone-sun" class="phone-home-button-class settings-app-toggle"><i class="fas fa-cog" data-toggle="tooltip" data-placement="left" title="Settings"></i></div>
+                        <div id="silent-mode-one-top" class="phone-home-button-class phone-silent-button silent-mode-one"><i class="fas fa-bell"  data-toggle="tooltip" data-placement="left" title="Silent Mode"></i></div>
+                        <div style="display: none;" id="silent-mode-two-top" class="phone-home-button-class phone-silent-button silent-mode-two"><i class="fas fa-bell-slash"  data-toggle="tooltip" data-placement="left" title="Silent Mode" ></i></div>
+                        <!-- <div data-toggle="tooltip" title="Silent Mode" class="phone-home-button-class phone-silent-button silent-mode-one"><i class="fas fa-bell"></i></div> -->
+                        <!-- <div data-toggle="tooltip" title="Silent Mode" class="phone-home-button-class phone-silent-button silent-mode-two" style="display: none;"><i class="fas fa-bell-slash"></i></div> -->
+                        
+                        <!-- <i class="fas fa-unlock" id="phone-unlock" style="color: #9ed4a6;" data-toggle="tooltip" data-placement="left" title="Unlocked"></i> -->
+                        <i class="fas fa-signal" id="phone-signal" data-toggle="tooltip" data-placement="left" title="Evergreen 5G"></i>
                     </div>
                 </div>
 
@@ -163,7 +168,7 @@
 
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="17"></div>
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="18"></div>
-                        <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="19"></div>
+                        <div class="camera-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="19"></div>
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="20"></div>
 
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="21"></div>
@@ -439,14 +444,6 @@
                         <div class="details-header">
                             <!-- <p>Services</p> -->
                             <div class="details-money-types">
-                                <div class="details-moneys-body-main" data-toggle="tooltip" title="Cash Balance">
-                                    <div class="details-icon-class"><i style="color: #b1d18e;"  class="fas fa-wallet"></i></div>
-                                    <div class="details-text-class details-cashmoney">$0901</div>
-                                </div>
-                                <div class="details-moneys-body-main" data-toggle="tooltip" title="Bank Balance">
-                                    <div class="details-icon-class"><i style="color: #b3b3b3;" class="fas fa-piggy-bank"></i></div>
-                                    <div class="details-text-class details-bankmoney">$0901</div>
-                                </div>
                                 <div class="details-moneys-body-main" data-toggle="tooltip" title="State ID Number">
                                     <div class="details-icon-class"><i style="color: #e0d361;" class="fas fa-id-card"></i></div>
                                     <div class="details-text-class details-stateid" >CLM21795</div>
@@ -455,9 +452,13 @@
                                     <div class="details-icon-class"><i style="color: #9b5c83;" class="fas fa-mobile-alt"></i></div>
                                     <div class="details-text-class details-phone" >0901</div>
                                 </div>
-                                <div class="details-moneys-body-main" data-toggle="tooltip" title="Discord Link">
-                                    <div class="details-icon-class"><i style="color: #738ADB;" class="fab fa-discord"></i></div>
-                                    <div class="details-text-class discordhere">discord.gg/yourdiscord</div>
+                                <div class="details-moneys-body-main" data-toggle="tooltip" title="Cash Balance">
+                                    <div class="details-icon-class"><i style="color: #b1d18e;"  class="fas fa-wallet"></i></div>
+                                    <div class="details-text-class details-cashmoney">$0901</div>
+                                </div>
+                                <div class="details-moneys-body-main" data-toggle="tooltip" title="Bank Balance">
+                                    <div class="details-icon-class"><i style="color: #b3b3b3;" class="fas fa-piggy-bank"></i></div>
+                                    <div class="details-text-class details-bankmoney">$0901</div>
                                 </div>
                             </div>
                         </div>
@@ -1139,11 +1140,11 @@
                                 <div class="whatsapp-header-top-openedchat"></div>
                                 <div class="whatsapp-header-footer-openedchat">
 
-                                    <span id="whatsapp-search-input-text">Search</span>
-                                    <i class="fas fa-search" id="whatsapp-search-input-icon"></i>
-                                    <input type="text" id="whatsapp-contact-input-search" placeholder="" spellcheck="false">
+                                    <!-- <span id="whatsapp-search-input-text">Search</span> -->
+                                    <!-- <i class="fas fa-search" id="whatsapp-search-input-icon"></i> -->
+                                    <!-- <input type="text" id="whatsapp-contact-input-search" placeholder="" spellcheck="false"> -->
 
-                                    <div class="whatsapp-openedchat-picture"></div>
+                                    <!-- <div class="whatsapp-openedchat-picture"></div> -->
                                     <div class="whatsapp-openedchat-name"><p></p></div>
                                     <div class="whatsapp-openedchat-number"><p></p></div>
                                     <i id="whatsapp-openedchat-back" class="fas fa-chevron-left"></i>
@@ -1298,12 +1299,13 @@
                 <!-- Phone Home Button -->
                 <div class="phone-footer">
                     <div class="phone-home-container">
-                        <div data-toggle="tooltip" title="Silent Mode" class="phone-home-button-class phone-silent-button silent-mode-one"><i class="fas fa-bell"></i></div>
-                        <div data-toggle="tooltip" title="Silent Mode" class="phone-home-button-class phone-silent-button silent-mode-two" style="display: none;"><i class="fas fa-bell-slash"></i></div>
-                        <div data-toggle="tooltip" title="Camera" class="phone-home-button-class phone-take-camera-button"><i class="fas fa-camera"></i></div>
-                        <div data-toggle="tooltip" title="Home" class="phone-home-button-class phone-tab-button" style="font-size: 130%;margin-top: -1.1%;"><i class="far fa-circle"></i></div>
-                        <div data-toggle="tooltip" title="Orientation (disabled)" class="phone-home-button-class"><i class="fas fa-sync"></i></div>
-                        <div data-toggle="tooltip" title="Settings" class="phone-home-button-class settings-app-toggle"><i class="fas fa-cog"></i></div>
+                        <!-- <div data-toggle="tooltip" title="Silent Mode" class="phone-home-button-class phone-silent-button silent-mode-one"><i class="fas fa-bell"></i></div> -->
+                        <!-- <div data-toggle="tooltip" title="Silent Mode" class="phone-home-button-class phone-silent-button silent-mode-two" style="display: none;"><i class="fas fa-bell-slash"></i></div> -->
+                        <!-- <div data-toggle="tooltip" title="Camera" class="phone-home-button-class phone-take-camera-button"><i class="fas fa-camera"></i></div> -->
+                        <!-- <i class="fas fa-window-minimize"></i> -->
+                        <div data-toggle="tooltip" title="Home" id="homebutton" class="phone-home-button-class phone-tab-button" style="font-size: 130%;margin-top: -1.1%;"></div>
+                        <!-- <div data-toggle="tooltip" title="Orientation (disabled)" class="phone-home-button-class"><i class="fas fa-sync"></i></div> -->
+                        <!-- <div data-toggle="tooltip" title="Settings" class="phone-home-button-class settings-app-toggle"><i class="fas fa-cog"></i></div> -->
                     </div>
                 </div>
             </div>
@@ -1369,6 +1371,6 @@
         <script src="./js/lsbn.js"></script>
         <script src="./js/publicphone.js"></script>
         <script src="./js/group-chats.js"></script>
-        <script type="text/javascript">$('#whatsapp-openedchat-message').emojioneArea({inline: true, searchPosition: "bottom", shortnames: true})</script>
+        <!-- <script type="text/javascript">$('#whatsapp-openedchat-message').emojioneArea({inline: true, searchPosition: "bottom", shortnames: true})</script> -->
     </body>
 </html>
